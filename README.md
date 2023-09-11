@@ -8,5 +8,5 @@ Link [https://xvpc.github.io/animations](https://xvpc.github.io/animations).
 
 ## Screenshots
 
-![Site1 Image](./images/site/site1.png)
-![Site2 Image](./images/site/site2.png)
+![Site1 Image](./public/images/site/site1.png)
+![Site2 Image](./public/images/site/site2.png)
