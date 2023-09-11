@@ -1,8 +1,8 @@
-A simple Web-site for testing animations and other features.
+A simple Nextjs Website that uses [Framer-motion](https://www.framer.com/motion) for testing animations and other features.
 
 
 
-Link [https://xvpc.github.io/animations](https://xvpc.github.io/animations).
+[Go to site](https://xvpc.github.io/animations)
 
 
 
