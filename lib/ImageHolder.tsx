@@ -1,0 +1,15 @@
+import React from 'react'
+
+// Nextjs
+import Image from 'next/image'
+
+type ImageHolderProps = {
+    image: string,
+    title?: string,
+    name?: string,
+}
+export default function ImageHolder({image, title, name}: ImageHolderProps) {
+    return (
+        <Image className='img-fluid h-100' src={image} alt={title || ""} width={1080} height={720} />
+    )
+}

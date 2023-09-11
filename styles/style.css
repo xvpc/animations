@@ -1,0 +1,8 @@
+
+*{
+    font-family: cursive, Verdana, Geneva, Tahoma, sans-serif;
+}
+.gradient-bg{
+    background-color: #655d72;
+    background-image: linear-gradient(147deg, #655d72 0%, #898196 74%);
+}
