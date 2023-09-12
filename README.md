@@ -2,7 +2,7 @@ A simple Nextjs Website that uses [Framer-motion](https://www.framer.com/motion)
 
 
 
-# [Go to site](https://xvpc.github.io/animations)
+## [Go to site](https://xvpc.github.io/animations)
 
 
 
