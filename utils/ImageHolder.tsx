@@ -14,10 +14,10 @@ export default function ImageHolder({ title, url, name, width, height, slider }:
         <div className=''>
             <img 
             onError={(e) => {
-                e.currentTarget.src = "/images/placeholder.png";
+                e.currentTarget.src = "." + "/images/placeholder.png";
                 e.currentTarget.onerror = null;
             }}
-            src={url} alt={title}
+            src={"." + url} alt={title}
             style={{aspectRatio: "5/6", minWidth: slider ? "auto" : " 300px", maxWidth: slider ? "auto" : "440px"}}
             className={`p-0 m-auto object-cover`}
             />
