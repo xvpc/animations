@@ -1,0 +1,58 @@
+{
+    "data": [
+        {
+            "id": 0,
+            "name": "Redbull",
+            "description": "Red Bull is a brand of energy drinks created and owned by the Austrian company Red Bull GmbH.",
+            "price": "2.59",
+            "image": "/images/redbull.png",
+            "textColor": "text-blue-800",
+            "backgroundColor": "redbull-color"
+        },
+        {
+            "id": 1,
+            "name": "cocacola",
+            "description": "The Coca-Cola Company is an American multinational corporation founded in 1892.",
+            "price": "0.99",
+            "image": "/images/cocacola.png",
+            "textColor": "text-red-600",
+            "backgroundColor": "cocacola-color"
+        },
+        {
+            "id": 2,
+            "name": "cocazero",
+            "description": "Cola is a carbonated soft drink flavored with vanilla, cinnamon, citrus oils, and other flavorings.",
+            "price": "1.20",
+            "image": "/images/cocazero.png",
+            "textColor": "text-black",
+            "backgroundColor": "cocazero-color"
+        },
+        {
+            "id": 3,
+            "name": "fanta",
+            "description": "Fanta is an American-owned brand of fruit-flavored carbonated soft drink created by Coca-Cola Deutschland under the leadership of German businessman Max Keith.",
+            "price": "1.49",
+            "image": "/images/fanta.png",
+            "textColor": "text-orange-600",
+            "backgroundColor": "fanta-color"
+        },
+        {
+            "id": 4,
+            "name": "sprite",
+            "description": "Sprite is a clear, lemon-lime flavored soft drink created by the Coca-Cola Company. Sprite comes in multiple flavors, including cranberry.",
+            "price": "2.59",
+            "image": "/images/sprite.png",
+            "textColor": "text-green-800",
+            "backgroundColor": "sprite-color"
+        },
+        {
+            "id": 5,
+            "name": "pepsi",
+            "description": "Pepsi is a carbonated soft drink with a cola flavor, manufactured by PepsiCo. As of 2023.",
+            "price": "1.46",
+            "image": "/images/pepsi.png",
+            "textColor": "text-blue-800",
+            "backgroundColor": "pepsi-color"
+        }
+    ]
+}

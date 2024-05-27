@@ -7,27 +7,73 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+*{
+  scrollbar-width: none !important;
+}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.default-color{
+  h1{
+    color: rgb(87 83 78);
   }
+  background-image: linear-gradient(to top, rgb(87 83 78), transparent);
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.pepsi-color{
+  h1{
+    color: rgb(30 58 138);
   }
+  background-image: linear-gradient(to top, rgb(30 58 138), transparent);
 }
+.fanta-color{
+  h1{
+    color: rgb(234 88 12);
+  }
+  background-image: linear-gradient(to top, rgb(234 88 12), transparent);
+}
+.cocacola-color{
+  h1{
+    color: rgb(220 38 38);
+  }
+  background-image: linear-gradient(to top, rgb(220 38 38), transparent);
+}
+.cocazero-color{
+  h1{
+    color: black;
+  }
+  background-image: linear-gradient(to top, black, transparent);
+}
+.sprite-color{
+  h1{
+    color: rgb(22 101 52);
+  }
+  background-image: linear-gradient(to top, rgb(22 101 52), transparent);
+}
+.redbull-color{
+  h1{
+    color: rgb(72, 87, 228);
+  }
+  background-image: linear-gradient(to top, rgb(72, 87, 228), transparent);
+}
+
+/* @layer utilities {
+  .default-color{
+    @apply bg-gradient-to-t from-stone-600 to-transparent;
+  }
+  .pepsi-color{
+    @apply bg-gradient-to-t from-blue-900 to-transparent;
+  }
+  .fanta-color{
+    @apply bg-gradient-to-t from-orange-600 to-transparent;
+  }
+  .cocacola-color{
+    @apply bg-gradient-to-t from-red-600 to-transparent;
+  }
+  .cocazero-color{
+    @apply bg-gradient-to-t from-black to-gray-600;
+  }
+  .sprite-color{
+    @apply bg-gradient-to-t from-green-800 to-yellow-50;
+  }
+  .redbull-color{
+    @apply bg-gradient-to-t from-blue-900 to-transparent;
+  }
+} */
