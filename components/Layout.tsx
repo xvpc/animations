@@ -33,7 +33,7 @@ export default function Layout({ children, pageTitle }: layoutProps) {
         animate="animate"
         exit="exit"
         transition={{ duration: 0.4, ease: "easeInOut" }}
-        className={`${roboto.className} overflow-x-hidden text-white flex flex-col justify-between items-center`}
+        className={`${roboto.className} main-bg overflow-x-hidden text-white flex flex-col justify-between items-center`}
         >
             <header>
                 <nav className='absolute top-0 start-0 end-0'>
@@ -53,7 +53,7 @@ export default function Layout({ children, pageTitle }: layoutProps) {
                     }
                 </nav>
             </header>
-            <main className='w-full px-0'>
+            <main className='w-full h-screen px-0'>
                 {children}
             </main>
         </motion.div>

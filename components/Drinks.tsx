@@ -1,5 +1,6 @@
-import React, { useMemo, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 
+// Utils
 import ImageHolder from '@/utils/ImageHolder'
 
 // SwiperJs
@@ -13,13 +14,18 @@ import 'swiper/css/keyboard'
 import "swiper/css/free-mode";
 import "swiper/css/thumbs";
 
+// Animations
 import { motion } from 'framer-motion';
 
 // Data
 import drinks from '@/data/drinks.json';
+
+// Icons
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
-import { Button, CircularProgress, IconButton } from '@mui/material';
 import { MdPayment } from 'react-icons/md';
+
+// Mui
+import { Button, CircularProgress, IconButton } from '@mui/material';
 
 
 export default function Drinks() {
@@ -33,12 +39,12 @@ export default function Drinks() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const currentData: Record<string, any> = drinks.data[currentIndex || 0];
 
-    useMemo(() => {
-        console.log(nextRef)
-    }, [nextRef])
+    // useMemo(() => {
+    //     console.log(nextRef)
+    // }, [nextRef])
 
     return (
-        <div className={`min-h-screen flex justify-center items-center transition-all ${drinks?.data[currentIndex || 0]?.backgroundColor || "default-color"}`}>
+        <div className={`min-h-full flex justify-center items-center transition-all ${drinks?.data[currentIndex || 0]?.backgroundColor || "default-color"}`}>
             {
                 drinks?.data?.length < 1 ?
                 <CircularProgress className='absolute top-1/2 start-1/2' size={48} /> :

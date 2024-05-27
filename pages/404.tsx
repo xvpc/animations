@@ -1,15 +1,31 @@
-import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 
+// NextJs
+import { useRouter } from 'next/router'
 
-export default function NoMatch() {
+// Components
+import Layout from '@/components/Layout';
+
+
+export default function NoMatch(){
     const router = useRouter();
 
     useEffect(() => {
-        router.push('/');
-    })
+        let timeout;
+        timeout = setTimeout(() => {
+            router.push('/');
+        }, 1000);
+        return () => {
+            clearTimeout(timeout);
+        }
+    }, []);
     
+
     return (
-        <div>404 not found..</div>
+        <Layout pageTitle='NoMatch'>
+            <div className='flex justify-center items-center min-h-full'>
+                <h1 className='text-center m-auto font-bold text-4xl text-gray-600'>404 not found..</h1>
+            </div>
+        </Layout>
     )
 }
