@@ -6,7 +6,8 @@ const nextConfig = {
   },
   output: 'export',
   distDir: 'out',
-  basePath: '/typer'
+  // Name of your Github project
+  basePath: '/animations'
 };
 
 export default nextConfig;
