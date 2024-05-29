@@ -1,16 +1,21 @@
 import React from 'react'
 
-import { Roboto } from "next/font/google";
-import { IoIosArrowBack } from 'react-icons/io';
-import { duration, IconButton } from '@mui/material';
+// NextJs
 import Link from 'next/link';
-import { easeInOut, motion } from 'framer-motion';
+import Head from 'next/head';
 
+// Icons
+import { IoIosArrowBack } from 'react-icons/io';
 
-const roboto = Roboto({
-    subsets: ["latin"],
-    weight: "400"
-})
+// Mui
+import { Button, IconButton, useMediaQuery } from '@mui/material';
+
+// Animations
+import { motion } from 'framer-motion';
+
+// Utils
+import { github, portfolio, site } from '@/utils/Assets';
+
 
 type layoutProps = {
     children?: React.ReactNode,
@@ -25,18 +30,21 @@ const animations = {
 
 
 export default function Layout({ children, pageTitle }: layoutProps) {
+    const matchMd = useMediaQuery('(min-width:768px)');
 
     return (
         <motion.div
-        variants={animations}
-        initial="initial"
-        animate="animate"
-        exit="exit"
-        transition={{ duration: 0.4, ease: "easeInOut" }}
-        className={`${roboto.className} main-bg overflow-x-hidden text-white flex flex-col justify-between items-center`}
+        className={`main-bg overflow-x-hidden text-white flex flex-col justify-between items-center`}
         >
+            <Head>
+                <title>{pageTitle || site.title}</title>
+                    <meta name="title" content={site.title} />
+                    <meta name="description" content={site.description} />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    {/* <link rel="icon" href="/favicon.ico" /> */}
+            </Head>
             <header>
-                <nav className='absolute top-0 start-0 end-0'>
+                <nav className='sticky w-screen h-20 z-50'>
                     {pageTitle?.toLowerCase() != "home" && 
                     <div className='flex flex-row justify-between items-center gap-10 py-4 px-8'>
                         <Link href={"/"}>
@@ -44,7 +52,7 @@ export default function Layout({ children, pageTitle }: layoutProps) {
                                 <IoIosArrowBack />
                             </IconButton>
                         </Link>
-                        <Link href={"https://xvpc.dev"} target='_blank'>
+                        <Link href={"https://"+portfolio} target='_blank'>
                             <h1 className='text-gray-200 font-bold'>
                                 xvpc.dev
                             </h1>
@@ -53,9 +61,25 @@ export default function Layout({ children, pageTitle }: layoutProps) {
                     }
                 </nav>
             </header>
-            <main className='w-full h-screen px-0'>
-                {children}
-            </main>
+            <motion.main 
+            variants={animations}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className='w-full h-screen px-0'
+            >
+                {matchMd ?
+                    children
+                    :
+                    <div className='container m-auto my-5 py-5 flex flex-col justify-center items-center text-center gap-5'>
+                        <h1 className='text-red-600 font-bold text-wrap'>Only Available for Desktop!</h1>
+                        <Link href={github} target='_blank'>
+                            <Button className='font-bold capitalize truncate self-center text-center' size="medium" variant="contained" title='Leave site' color='error'>Get out!</Button>
+                        </Link>
+                    </div>
+                }
+            </motion.main>
         </motion.div>
     )
 }

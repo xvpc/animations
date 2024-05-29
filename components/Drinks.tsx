@@ -39,9 +39,6 @@ export default function Drinks() {
     const [currentIndex, setCurrentIndex] = useState(0);
     const currentData: Record<string, any> = drinks.data[currentIndex || 0];
 
-    // useMemo(() => {
-    //     console.log(nextRef)
-    // }, [nextRef])
 
     return (
         <div className={`min-h-full flex justify-center items-center transition-all ${drinks?.data[currentIndex || 0]?.backgroundColor || "default-color"}`}>
@@ -55,7 +52,7 @@ export default function Drinks() {
                     transition={{duration: 3.4, repeatDelay: 0.6, repeat: Infinity, ease: 'easeOut'}}
                     className='rounded w-fit h-fit drop-shadow-2xl'
                     >
-                        <ImageHolder width={420} height={400} title={currentData.name} url={currentData.image} />
+                        <ImageHolder title={currentData.name} url={currentData.image} />
                     </motion.div>  
 
                     <div className='flex flex-col justify-center items-center gap-2'>
@@ -136,7 +133,7 @@ export default function Drinks() {
                                     drinks?.data.map((item, index) => {
                                         return(
                                             <SwiperSlide id={item.name} className={`rounded overflow-hidden cursor-pointer transition-all hover:drop-shadow-2xl`} key={index}>
-                                                <ImageHolder slider width={220} height={200} title={item.name} url={item.image} />
+                                                <ImageHolder slider title={item.name} url={item.image} />
                                             </SwiperSlide>
                                         )
                                     })

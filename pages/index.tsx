@@ -7,7 +7,7 @@ import Layout from "@/components/Layout";
 
 export default function Main() {
   return (
-    <Layout pageTitle={"Home"}>
+    <Layout pageTitle="Home">
       <Home />
     </Layout>
   );

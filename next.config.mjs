@@ -6,8 +6,7 @@ const nextConfig = {
   },
   output: 'export',
   distDir: 'out',
-  // Name of your Github project
-  basePath: '/animations'
+  basePath: process.env.NODE_ENV != "production" ? "" : "/animations"
 };
 
 export default nextConfig;

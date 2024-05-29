@@ -7,8 +7,10 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+
 *{
   scrollbar-width: none !important;
+  font-family: cursive, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .main-bg{

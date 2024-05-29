@@ -11,7 +11,7 @@ export default function NoMatch(){
     const router = useRouter();
 
     useEffect(() => {
-        let timeout;
+        let timeout: ReturnType<typeof setTimeout>;
         timeout = setTimeout(() => {
             router.push('/');
         }, 1000);

@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Components
 import Layout from '@/components/Layout'
 import Meals from '@/components/Meals'
 
